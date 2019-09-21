@@ -34,9 +34,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="LibUsbDotNet.LibUsbDotNet">
-      <HintPath>..\packages\LibUsbDotNet.2.2.29\lib\net45\LibUsbDotNet.LibUsbDotNet.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
@@ -60,10 +57,13 @@
     <Compile Include="Internals\Dfu\DfuUpload.cs" />
     <Compile Include="Internals\Dfu\NativeMethods.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <PackageReference Include="LibUsbDotNet">
+      <Version>2.2.29</Version>
+    </PackageReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="MeadowCLIKey.snk" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="libusb-1.0.dll">
